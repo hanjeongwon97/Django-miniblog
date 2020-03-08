@@ -1,0 +1,20 @@
+<h1>Blog</h1>
+
+
+{% for blog in blogs.all %}
+    <div class="container">
+        <hr>
+        <h2>title : {{ blog.title }}</h2>
+        <p>pub_date : {{ blog.pub_date }}</p>
+        <p>body : {{ blog.body }}</p>
+        <hr>
+    </div>
+{% endfor %}
+
+
+<h6>
+위에 목록은 {{blogs.all}} 구문을 사용해 객체에 있는 모든 쿼리셋을 
+가져와 출력. 
+<br>
+{{blogs}}는 리스트 형식의 쿼리셋 객체
+</h6>
